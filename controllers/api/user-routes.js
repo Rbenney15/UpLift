@@ -5,7 +5,9 @@ const { User, Workout } = require('../../models/');
 // GET '/api/user' --get all users [{ data }, ...]
 router.get('/', (req, res) => {
   User.findAll({
-    attributes: { exclude: ['password', 'updatedAt'] }
+    attributes: ['id', 'username', 'email', 'createdAt',
+      [sequelize.literal('(select count(*) from workout where user.id = workout.user_id)'), 'workout_count']
+    ]
   })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -22,7 +24,9 @@ router.get('/:id', (req, res) => {
     // include user's workouts sorted by time created
     include: {
       model: Workout,
-      attributes: ['id', 'createdAt']
+      attributes: ['id', 'createdAt',
+      [sequelize.literal('(select count(*) from entry where workout.id = entry.workout_id)'), 'entry_count']
+      ]
     }
   })
     .then(dbUserData => {

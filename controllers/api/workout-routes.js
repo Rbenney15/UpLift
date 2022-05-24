@@ -34,10 +34,10 @@ router.get('/:id', (req, res) => {
       },
       {
         model: Entry,
-        attributes: ['id'],
+        attributes: ['id', 'weight', 'set_count', 'rep_count', 'effort'],
         include: {
           model: Exercise,
-          attributes: ['exercise_name']
+          attributes: ['id', 'exercise_name']
         }
       }
     ]
