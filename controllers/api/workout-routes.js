@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
   })
     .then(dbWorkoutData => {
       if (!dbWorkoutData) {
-        res.status(404).json({ message: 'No workout found by this id' });
+        res.status(404).json({ message: 'No workout found by that id' });
         return;
       }
 
@@ -78,7 +78,7 @@ router.delete('/:id', (req, res) => {
   })
     .then(dbWorkoutData => {
       if (!dbWorkoutData) {
-        res.status(404).json({ message: 'No workout found by this id' });
+        res.status(404).json({ message: 'No workout found by that id' });
         return;
       }
 
