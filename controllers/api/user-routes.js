@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
     include: {
       model: Workout,
       attributes: ['id', 'createdAt',
-      [sequelize.literal('(select count(*) from entry where workout.id = entry.workout_id)'), 'entry_count']
+        [sequelize.literal('(select count(*) from entry where workouts.id = entry.workout_id)'), 'entry_count']
       ]
     }
   })
