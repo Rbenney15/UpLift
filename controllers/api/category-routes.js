@@ -5,7 +5,7 @@ const { User, Category, Exercise, Workout, Entry } = require('../../models/');
 // GET '/api/category' --get all categories [{ data }, ...]
 router.get('/', (req, res) => {
   Category.findAll({
-    attributes: [ 'id', 'category_name',
+    attributes: ['id', 'category_name',
       [sequelize.literal('(select count(*) from exercise where category.id = exercise.category_id)'), 'exercise_count']
     ]
   })

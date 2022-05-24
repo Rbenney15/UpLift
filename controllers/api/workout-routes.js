@@ -5,7 +5,7 @@ const { User, Exercise, Workout, Entry } = require('../../models/');
 // GET '/api/workout' --get all workouts [{ data }, ...]
 router.get('/', (req, res) => {
   Workout.findAll({
-    attributes: [ 'id', 'createdAt',
+    attributes: ['id', 'createdAt',
       [sequelize.literal('(select count(*) from entry where workout.id = entry.workout_id)'), 'entry_count'],
     ],
     include: [
@@ -62,9 +62,7 @@ router.post('/', (req, res) => {
   Workout.create({
     user_id: req.body.user_id
   })
-    .then(dbWorkoutData => {
-      res.json(dbWorkoutData);
-    })
+    .then(dbWorkoutData => { res.json(dbWorkoutData); })
     .catch(err => {
       console.error(err);
       res.status(500).json(err);
