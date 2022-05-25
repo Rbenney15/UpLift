@@ -10,3 +10,7 @@ const entriesData = [
         rest: '1 minute'
     },
 ];
+
+const seedEntries = () => Entries.bulkCreate(entriesData);
+
+module.exports = seedEntries;
