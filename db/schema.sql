@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS uplift_db;
+
+CREATE DATABASE uplift_db;
