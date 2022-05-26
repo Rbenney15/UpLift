@@ -3,7 +3,7 @@ async function logout() {
       method: "post",
       headers: { "Content-Type": "application/json" },
     });
-//   double check all paths using correct nameing
+    
     if (response.ok) {
       document.location.replace("/");
     } else {
