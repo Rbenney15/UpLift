@@ -13,6 +13,7 @@ Entry.init(
     },
     workout_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'workout',
         key: 'id'
@@ -20,10 +21,24 @@ Entry.init(
     },
     exercise_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'exercise',
         key: 'id'
       }
+    },
+
+    set_count: {
+      type: DataTypes.INTEGER
+    },
+    rep_count: {
+      type: DataTypes.INTEGER
+    },
+    weight: {
+      type: DataTypes.INTEGER
+    },
+    effort: {
+      type: DataTypes.STRING
     }
   },
   {
