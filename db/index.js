@@ -1,5 +1,5 @@
 const seedCategories = require('./categories');
-const seedEntries = require('./entires');
+const seedEntries = require('./entries');
 const seedExercises = require('./exercises');
 const seedUsers = require('./users');
 const seedWorkouts = require('./workouts');
