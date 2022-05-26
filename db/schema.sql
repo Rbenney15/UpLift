@@ -1,3 +1,3 @@
-drop database if exists uplift_db;
+DROP DATABASE IF EXISTS uplift_db;
 
-create database uplift_db;
+CREATE DATABASE uplift_db;
