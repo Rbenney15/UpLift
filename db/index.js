@@ -9,10 +9,10 @@ const sequelize = require('../config/connection');
 const seedAll = async () => {
     await sequelize.sync({ force: true });
     await seedCategories();
-    await seedEntries();
     await seedExercises();
     await seedUsers();
     await seedWorkouts();
+    await seedEntries();
     process.exit(0);
 };
 

@@ -1,4 +1,4 @@
-const { Entries } = require('../models');
+const { Entry } = require('../models');
 
 const entriesData = [
     // ROB 1
@@ -21,36 +21,30 @@ const entriesData = [
     // ROB 2
     {
         workout_id: '2',
-        exercise_id: '1',
+        exercise_id: '3',
+        effort: 'easy warm-up'
+    },
+    {
+        workout_id: '2',
+        exercise_id: '8',
         set_count: '3',
-        rep_count: '10',
-        weight: '25 lbs',
+        rep_count: '8',
+        weight: '125 lbs',
         rest: '1 minute'
     },
     {
         workout_id: '2',
-        exercise_id: '1',
-        set_count: '3',
-        rep_count: '10',
-        weight: '25 lbs',
-        rest: '1 minute'
-    },
-    {
-        workout_id: '2',
-        exercise_id: '1',
-        set_count: '3',
-        rep_count: '10',
-        weight: '25 lbs',
-        rest: '1 minute'
+        exercise_id: '4',
+        effort: 'aggressive',
+        rest: '30 seconds'
     },
 
     // SETH
     {
         workout_id: '3',
-        exercise_id: '1',
+        exercise_id: '9',
         set_count: '3',
-        rep_count: '10',
-        weight: '25 lbs',
+        rep_count: '12',
         rest: '1 minute'
     },
     // BADARA
@@ -64,6 +58,6 @@ const entriesData = [
     },
 ];
 
-const seedEntries = () => Entries.bulkCreate(entriesData);
+const seedEntries = () => Entry.bulkCreate(entriesData);
 
 module.exports = seedEntries;
