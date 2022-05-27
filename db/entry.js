@@ -1,6 +1,6 @@
-const { Entries } = require('../models');
+const { Entry } = require('../models');
 
-const entriesData = [
+const entryData = [
     {
         workout_id: '1',
         exercise_id: '1',
@@ -11,6 +11,6 @@ const entriesData = [
     },
 ];
 
-const seedEntries = () => Entries.bulkCreate(entriesData);
+const seedEntries = () => Entry.bulkCreate(entryData);
 
 module.exports = seedEntries;

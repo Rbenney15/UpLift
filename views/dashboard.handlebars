@@ -1,0 +1,13 @@
+{{#if posts.length}}
+<section>
+  <h2>Your Workouts</h2>
+    {{#each posts as |post|}}
+      {{> dashboard-postinfo post}}
+    {{/each}}
+
+</section>
+{{/if}}
+
+<button type="submit" class="btn"><a class="link" href="/dashboard/new">Log New Workout</a></button>
+
+<script src="/public/javascript/add-post.js"></script>

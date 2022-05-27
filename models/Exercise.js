@@ -13,6 +13,8 @@ Exercise.init(
     },
     exercise_name: {
       type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
       validate: {
         notEmpty: true,
         len: [1]
@@ -20,6 +22,7 @@ Exercise.init(
     },
     category_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'category',
         key: 'id'
