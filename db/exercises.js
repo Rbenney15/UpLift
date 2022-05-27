@@ -1,44 +1,44 @@
-const { Exercises } = require('../models');
+const { Exercise } = require('../models');
 
 const exerciseData = [
     {
         category_id: '3', //Arms
-        type: 'Bicep Curl'
+        exercise_name: 'Bicep Curl'
     },
     {
         category_id: '3', 
-        type: 'Tricep Extension'
+        exercise_name: 'Tricep Extension'
     },
     {
         category_id: '1', //Cardio
-        type: 'Walking'
+        exercise_name: 'Walking'
     },
     {
         category_id: '2', //cooldown
-        type: 'Stretching'
+        exercise_name: 'Stretching'
     },
     {
         category_id: '4', //chest
-        type: 'Bench Press'
+        exercise_name: 'Bench Press'
     },
     {
         category_id: '5', //back
-        type: 'Lateral Pull-down'
+        exercise_name: 'Lateral Pull-down'
     },
     {
         category_id: '6', //shoulders
-        type: 'Lateral Raises'
+        exercise_name: 'Lateral Raises'
     },
     {
         category_id: '7', //legs
-        type: 'squat'
+        exercise_name: 'Squats'
     },
     {
         category_id: '8', //core
-        type: 'crunches'
+        exercise_name: 'Crunches'
     },
 ];
 
-const seedExercises = () => Exercises.bulkCreate(exerciseData);
+const seedExercises = () => Exercise.bulkCreate(exerciseData);
 
-module.export = seedExercises;
+module.exports = seedExercises;

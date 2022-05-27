@@ -1,32 +1,32 @@
-const { Categories } = require('../models');
+const { Category } = require('../models');
 
 const categoryData = [
     {
-        name: 'Cardio'
+        category_name: 'Cardio'
     },
     {
-        name: 'Cooldown'
+        category_name: 'Cooldown'
     },
     {
-        name: 'Arms'
+        category_name: 'Arms'
     },
     {
-        name: 'Chest'
+        category_name: 'Chest'
     },
     {
-        name: 'Back'
+        category_name: 'Back'
     },
     {
-        name: 'Shoulders'
+        category_name: 'Shoulders'
     },
     {
-        name: 'Legs'
+        category_name: 'Legs'
     },
     {
-        name: 'Core'
+        category_name: 'Core'
     },
 ];
 
-const seedCategories = () => Categories.bulkCreate(categoryData);
+const seedCategories = () => Category.bulkCreate(categoryData);
 
-module.export = seedCategories;
+module.exports = seedCategories;
