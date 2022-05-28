@@ -37,6 +37,9 @@ Entry.init(
     weight: {
       type: DataTypes.STRING
     },
+    rest: {
+      type: DataTypes.STRING
+    },
     effort: {
       type: DataTypes.STRING
     }

@@ -1,24 +1,24 @@
 const router = require('express').Router();
-const { Workout, Entry, Exercise } = require('../models');
+const { Workout, Entry, Exercise, User } = require('../models');
 
 router.get('/', (req, res) => {
-  res.render('feed', { loggedIn: req.session.loggedIn });
-});
-
-router.get('/dashboard', (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
     return;
   }
 
   Workout.findAll({
-    where: {
-      user_id: req.session.user_id
-    },
+    order: [
+      ['createdAt', 'DESC']
+    ],
     include: [
       {
+        model: User,
+        attributes: ['id', 'username']
+      },
+      {
         model: Entry,
-        attributes: ['set_count', 'rep_count', 'weight'],
+        exclude: ['id', 'updatedAt'],
         include: {
           model: Exercise,
           attributes: ['exercise_name']
@@ -27,27 +27,19 @@ router.get('/dashboard', (req, res) => {
     ]
   })
     .then(dbWorkoutData => {
-      console.log(dbWorkoutData.map(workout => workout.dataValues));
-      res.render('dashboard', 
-      { 
+      const trimmed = dbWorkoutData.splice(12);
+
+      res.render('feed',
+      {
         greeting: req.session.username,
         loggedIn: req.session.loggedIn,
         posts: dbWorkoutData.map(workout => workout.get({ plain: true }))
       })
     })
-    .catch(err => {
+    .catch (err => {
       console.error(err);
       res.sendStatus(500);
     });
-
-  // res.render('dashboard',
-  // { 
-  //   user_id: req.session.user_id 
-  // });
-});
-
-router.get('/dashboard/new', (req, res) => {
-
 });
 
 router.get('/login', (req, res) => {

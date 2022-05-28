@@ -2,7 +2,16 @@
 <section>
   <h2>Your Workouts</h2>
     {{#each posts as |post|}}
-      {{> dashboard-postinfo post}}
+    <p>Workout: {{post.createdAt}}
+      <ul>
+        {{#each entries as |entry|}}
+        <li>
+          {{entry.exercise.exercise_name}}: {{entry.set_count}} sets/{{entry.rep_count}} reps, {{entry.weight}}, {{entry.effort}}, {{entry.rest}} rest
+        </li>
+        {{/each}}
+      </ul>
+
+    </p>
     {{/each}}
 
 </section>
