@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Workout, Exercise, Entry } = require('../models');
+const { Workout, Category, Exercise, Entry } = require('../models');
 
 // dashboard/ - Return latest 5 workouts
 router.get('/', (req, res) => {
@@ -83,17 +83,31 @@ router.get('/all', (req, res) => {
     })
 });
 
-// dashboard/new - Make a new post
+// dashboard/new - Make a new post; must expose available exercises to choose from to create add-workout
 router.get('/new', (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
   }
 
-  res.render('add-workout',
-  {
-    greeting: req.session.username,
-    loggedIn: req.session.loggedIn
-  });
+  Category.findAll({
+    include: {
+      model: Exercise,
+      attributes: ['exercise_name']
+    }
+  })
+    .then(dbCatData => {
+      res.render('add-workout',
+      {
+        loggedIn: req.session.loggedIn,
+        greeting: req.session.username,
+        user_id: req.session.user_id,
+        categories: dbCatData.map(category => category.get({ plain: true }))
+      })
+    })
+    .catch(err => {
+      console.error(err);
+      res.sendStatus(500);
+    })
 });
 
 
