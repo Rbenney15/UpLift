@@ -8,7 +8,8 @@ async function newFormHandler(event) {
       method: "POST",
       body: JSON.stringify({
         //   double check naming is correct
-        title,
+        user_id,
+        // content of workout
         content,
       }),
       headers: {

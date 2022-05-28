@@ -1,5 +1,16 @@
-<article class="post">
-    {{#each posts as |post| }}
-        {{!-- {{> post-info post }} --}}
-    {{/each}}    
-</article>
+<section>
+    <article class="post">
+        {{#each posts as |post| }}
+            <p>{{post.user.username}} {{post.createdAt}}
+      <ul>
+        {{#each entries as |entry|}}
+        <li>
+          {{entry.exercise.exercise_name}}: {{entry.set_count}} sets/{{entry.rep_count}} reps, {{entry.weight}}, {{entry.effort}}, {{entry.rest}} rest
+        </li>
+        {{/each}}
+      </ul>
+
+    </p>
+        {{/each}}    
+    </article>
+</section>
