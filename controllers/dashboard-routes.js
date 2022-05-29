@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Workout, Category, Exercise, Entry } = require('../models');
+const withAuth = require('../utils/auth');
 
 // dashboard/ - Return latest 5 workouts
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
     return;
@@ -44,7 +45,7 @@ router.get('/', (req, res) => {
 });
 
 // dashboard/all - Return all workouts from the logged-in user
-router.get('/all', (req, res) => {
+router.get('/all', withAuth, (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
     return;
@@ -84,7 +85,7 @@ router.get('/all', (req, res) => {
 });
 
 // dashboard/new - Make a new post; must expose available exercises to choose from to create add-workout
-router.get('/new', (req, res) => {
+router.get('/new', withAuth, (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
   }
