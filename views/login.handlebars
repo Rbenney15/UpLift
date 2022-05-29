@@ -3,16 +3,18 @@
   <form id="login-form" class="card-body">
     {{!-- <label class="form-label" for="username-login">Username</label>
     <input  id="username-login" type="text" autofocus="true" class="form-input" /> --}}
-   {{!-- add email field --}}
+   
     <label class="form-label" for="email-login">Email</label>
     <input id="email-login" type="text" autofocus="true" class="form-input" />
 
     <label class="form-label" for="password-login">Password</label>
     <input id="password-login" type="password" autofocus="true" class="form-input" />
 
-    <button type="submit" class="btn">Login!</button>
-    <a class="login-link" href="/signup">Sign up instead</a>
+    <button type="submit" class="btn">Login</button>
+    {{!-- <button type="submit" class="btn">Signup</button> --}}
+    <a class="btn" href="/signup">Signin</a>
   </form>
 </div>
     
 <script src="javascript/login.js"></script>
+{{!-- <script src="javascript/signup.js"></script> --}}

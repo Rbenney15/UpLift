@@ -4,7 +4,7 @@ async function signupFormHandler(event) {
     const username = document.querySelector("#username-signup").value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector("#password-signup").value.trim();
-  //  double check all paths to make sure naming routes are consistent. 
+  
     if (username && password) {
       const response = await fetch("/api/user", {
         method: "POST",
@@ -25,4 +25,5 @@ async function signupFormHandler(event) {
     }
   }
   
-  document.querySelector("#signup-form").addEventListener("submit", signupFormHandler);
+document.querySelector("#signup-form").addEventListener("submit", signupFormHandler);
+// document.querySelector("#login-form").addEventListener("submit", loginFormHandler);  
