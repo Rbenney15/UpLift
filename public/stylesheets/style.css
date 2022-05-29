@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  border-color: black;
+}
+
+body, html {
+  height: 50%;
+  padding: 20px;
+  margin: 10px;
+  font-family: sans-serif;
+  background-color: rgb(35, 76, 92);
+}
+
+a {
+  text-decoration: none;
+  color: #999ea3;
+  font-weight: bold;
+  transition: color .1s;
+}
+
+a:hover {
+  color: rgb(91, 164, 91);
+}
+
+.btn {
+  background-color: #165ea6;
+  border: 10;
+  padding: 2%;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgb(40, 80, 40);
+  font-weight: 100;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  color: rgb(227, 170, 95);
+}
+
+article {
+  padding: .5%;
+  border-radius: 5px;
+  border: 1px solid rgb(16, 4, 35);
+}
+
+form > div {
+  margin-bottom: 2%;
+}
+
+form label {
+  display: block;
+}
+
+.wrapper {
+  width: 80%;
+  min-height: 100%;
+  max-width: 800px;
+  margin: 1% auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border-bottom: 10px solid gray;
+  display:flex;
+  font-size:large;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1 5%;
+}
+
+header h1 {
+  font-size: 1em;
+  color: black;
+}
+
+main {
+  flex: 5;
+  padding: 1% 5%;
+  color: black;
+}
+
+.post {
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+.form {
+  margin-bottom: 5%;
+}
+
+label {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+
+
+
