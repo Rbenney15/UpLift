@@ -77,6 +77,7 @@ router.post('/', (req, res) => {
     set_count: req.body.set_count,
     rep_count: req.body.rep_count,
     weight: req.body.weight,
+    rest: req.body.rest,
     effort: req.body.effort
   })
     .then(dbEntryData => { res.json(dbEntryData); })
