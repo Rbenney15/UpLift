@@ -1,5 +1,5 @@
 <div class="card">
-  <h3 class="card-header">Sign Up</h3>
+  <h3 class="card-header">Create an Account</h3>
   <form id="signup-form" class="card-body">
     <label for="username-signup" class="form-label">Username</label>
     <input id="username-signup" type="text" class="form-input" />
@@ -11,8 +11,10 @@
     <input  id="password-signup" type="password" class="form-input" />
 
     <button type="submit" class="btn">Signup</button>
-    {{!-- <button type="submit" class="btn">Login</button> --}}
-    <a class="btn" href="/login">Login</a>
+    <button type="submit" class="btn" href="/login">
+      <a class="btn" href="/login">Login</a>
+    </button>
+    {{!-- <a class="btn" href="/login">Login</a> --}}
   </form>
 </div>
 
