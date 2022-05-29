@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User, Category, Exercise, Workout, Entry } = require('../../models/');
+const withAuth = require('../../utils/auth');
 
 // GET '/api/exercise' --get all exercises [{ data }, ...]
 router.get('/', (req, res) => {
@@ -48,7 +49,7 @@ router.get('/:id', (req, res) => {
 
 // POST '/api/exercise' --create exercise
 // requires exercise_name, category_id
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Exercise.create({
     exercise_name: req.body.exercise_name,
     category_id: req.body.category_id
@@ -61,7 +62,7 @@ router.post('/', (req, res) => {
 });
 
 // DELETE '/api/exercise' --delete exercise
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Exercise.destroy({
     where: { id: req.params.id }
   })

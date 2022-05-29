@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User, Exercise, Workout, Entry } = require('../../models/');
+const withAuth = require('../../utils/auth');
 
 // GET '/api/workout' --get all workouts [{ data }, ...]
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   Workout.findAll({
     attributes: ['id', 'createdAt',
       [sequelize.literal('(select count(*) from entry where workout.id = entry.workout_id)'), 'entry_count'],
@@ -23,7 +24,7 @@ router.get('/', (req, res) => {
 });
 
 // GET '/api/workout/:id' --get single workout { data }
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
   Workout.findOne({
     where: { id: req.params.id },
     attributes: { exclude: ['user_id', 'updatedAt'] },
@@ -58,7 +59,7 @@ router.get('/:id', (req, res) => {
 
 // POST '/api/workout' --create workout
 // requires user_id
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Workout.create({
     user_id: req.body.user_id
   })
@@ -70,7 +71,7 @@ router.post('/', (req, res) => {
 });
 
 // DELETE '/api/workout/:id' --delete workout
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Workout.destroy({
     where: { id: req.params.id }
   })
