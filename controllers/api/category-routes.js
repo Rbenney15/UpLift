@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User, Category, Exercise, Workout, Entry } = require('../../models/');
+const withAuth = require('../../utils/auth');
 
 // GET '/api/category' --get all categories [{ data }, ...]
 router.get('/', (req, res) => {
@@ -44,7 +45,7 @@ router.get('/:id', (req, res) => {
 
 // POST '/api/category' --create category
 // requires category_name
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Category.create({
     category_name: req.body.category_name
   })
@@ -56,7 +57,7 @@ router.post('/', (req, res) => {
 });
 
 // DELETE '/api/category/:id' --delete category
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Category.destroy({
     where: { id: req.params.id }
   })
