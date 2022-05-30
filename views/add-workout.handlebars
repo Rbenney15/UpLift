@@ -1,0 +1,30 @@
+<section>
+  <h3>Log a workout</h3>
+  <form id="add-workout-form">
+    <input type="hidden" id="user-id" value="{{user_id}}">
+
+    <label class="form-label" for="exercise-select">Add an exercise</label>
+    <select name="exercise" id="exercise-select">
+      {{#each categories as |category|}}
+      <optgroup label="{{category.category_name}}">
+        {{#each category.exercises as |exercise|}}
+        <option value="{{exercise.id}}">{{exercise.exercise_name}}</option>
+        {{/each}}
+      </optgroup>
+      {{/each}}
+    </select>
+    <br>
+    <label class="form-label" for="sets-field">Sets: </label><input id="sets-field" class="form-input" type="text">
+    <label class="form-label" for="reps-field">Reps: </label><input id="reps-field" class="form-input" type="text">
+    <label class="form-label" for="weight-field">Weight: </label><input id="weight-field" class="form-input" type="text">
+    <br>
+    <label class="form-label" for="rest-field">Rest: </label><input id="rest-field" class="form-input" type="text">
+    <label class="form-label" for="effort-field">Effort: </label><input id="effort-field" class="form-input" type="text">
+    <button id="add-entry">Add!</button>
+
+    <ul id="active-list"></ul>
+
+  </form>
+</section>
+
+{{!-- <script src="javascript/addworkout.js"></script> --}}
