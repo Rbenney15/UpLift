@@ -16,7 +16,8 @@ async function newFormHandler(event) {
     method: "POST",
     body: JSON.stringify({
       //   double check naming is correct
-      title,
+      user_id,
+      // content of workout
       content,
     }),
     headers: {
@@ -32,6 +33,7 @@ async function newFormHandler(event) {
   }
 }
 
+
 function addEntry(event) {
   event.preventDefault();
 
@@ -45,5 +47,5 @@ function addEntry(event) {
   list.appendChild(newItem);
 }
 
-document.getElementById("add-workout-form").addEventListener("submit", newFormHandler);  
+document.getElementById("add-workout-form").addEventListener("submit", newFormHandler);
 document.getElementById("add-entry").addEventListener("click", addEntry);
