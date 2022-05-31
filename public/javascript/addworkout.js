@@ -42,8 +42,17 @@ function addEntry(event) {
 
   const newItem = document.createElement("li");
 
-  newItem.textContent = `${lastIndex++} ${selectExercise.options[selectExercise.selectedIndex].text}: ${fieldSets.value} sets/${fieldReps.value} reps, ${fieldWeight.value}, ${fieldRest.value} rest, ${fieldEffort.value} effort`;
-  newItem.dataset.index = lastIndex;
+  const content = {
+    sets: fieldSets.value,
+    reps: fieldReps.value,
+    weight: fieldWeight.value,
+    rest: fieldRest.value,
+    effort: fieldEffort.value
+  };
+
+  // newItem.textContent = `${lastIndex++} ${selectExercise.options[selectExercise.selectedIndex].text}: ${fieldSets.value} sets/${fieldReps.value} reps, ${fieldWeight.value}, ${fieldRest.value} rest, ${fieldEffort.value} effort`;
+  newItem.textContent = `${selectExercise.options[selectExercise.selectedIndex].text}: ${formatEntry(content)}`;
+  newItem.dataset.index = lastIndex++;
 
   const exerciseId = selectExercise.options[selectExercise.selectedIndex].value;
 
@@ -59,6 +68,16 @@ function addEntry(event) {
 
   list.appendChild(newItem);
 }
+
+const formatEntry = (content) => {
+  const sets = content.sets? `${content.sets} sets` : '';
+  const reps = content.reps? `${content.reps} reps` : '';
+  const setrep = sets || reps? [sets, reps].filter(Boolean).join('/') : '';
+  const rest = content.rest? `rest for ${content.rest}` : '';
+
+  const entry = [setrep, content.weight, rest, content.effort].filter(Boolean).join(', ');
+  return entry;
+};
 
 document.getElementById("add-workout-form").addEventListener("submit", newFormHandler);
 document.getElementById("add-entry").addEventListener("click", addEntry);
