@@ -7,7 +7,7 @@ const fieldWeight = document.getElementById("weight-field");
 const fieldRest = document.getElementById("rest-field");
 const fieldEffort = document.getElementById("effort-field");
 
-const content = [];
+const workoutContent = [];
 
 async function newFormHandler(event) {
   event.preventDefault();
@@ -20,7 +20,7 @@ async function newFormHandler(event) {
       //   double check naming is correct
       user_id,
       // content of workout
-      content,
+      content: workoutContent,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -42,7 +42,7 @@ function addEntry(event) {
 
   const newItem = document.createElement("li");
 
-  const content = {
+  const entryContent = {
     sets: fieldSets.value,
     reps: fieldReps.value,
     weight: fieldWeight.value,
@@ -51,12 +51,12 @@ function addEntry(event) {
   };
 
   // newItem.textContent = `${lastIndex++} ${selectExercise.options[selectExercise.selectedIndex].text}: ${fieldSets.value} sets/${fieldReps.value} reps, ${fieldWeight.value}, ${fieldRest.value} rest, ${fieldEffort.value} effort`;
-  newItem.textContent = `${selectExercise.options[selectExercise.selectedIndex].text}: ${formatEntry(content)}`;
+  newItem.textContent = `${selectExercise.options[selectExercise.selectedIndex].text}: ${formatEntry(entryContent)}`;
   newItem.dataset.index = lastIndex++;
 
   const exerciseId = selectExercise.options[selectExercise.selectedIndex].value;
 
-  content.push({ 
+  workoutContent.push({ 
     exercise_id: exerciseId,
     set_count: fieldSets.value,
     rep_count: fieldReps.value,
@@ -64,7 +64,7 @@ function addEntry(event) {
     rest: fieldRest.value,
     effort: fieldEffort.value
   });
-  console.log(content);
+  console.log(workoutContent);
 
   list.appendChild(newItem);
 }
