@@ -58,12 +58,28 @@ router.get('/:id', withAuth, (req, res) => {
 });
 
 // POST '/api/workout' --create workout
-// requires user_id
+// requires user_id, content: [{ entry }, ... ]
 router.post('/', withAuth, (req, res) => {
   Workout.create({
     user_id: req.body.user_id
   })
-    .then(dbWorkoutData => { res.json(dbWorkoutData); })
+    .then(dbWorkoutData => { 
+      // For each item in content, create an Entry with available properties
+      for (let entry of req.body.content) {
+        console.log(entry);
+        Entry.create({
+          workout_id: dbWorkoutData.id,
+          exercise_id: entry.exercise_id,
+          set_count: entry.set_count,
+          rep_count: entry.rep_count,
+          weight: entry.weight,
+          rest: entry.rest,
+          effort: entry.effort
+        });
+      }
+
+      res.sendStatus(200); 
+    })
     .catch(err => {
       console.error(err);
       res.status(500).json(err);
