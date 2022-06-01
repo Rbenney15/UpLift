@@ -1,16 +1,20 @@
-* {
+/* * {
   box-sizing: border-box;
   border-color: rgb(9, 9, 9);
-}
+} */
+/* 
+/* :root {
+  /* height: 50%; */
+  /* padding: 50px; */
+  /* margin: 10px; */
+  /* font-family: sans-serif;
+  background-color: rgb(40, 117, 148); */
+/* }  */
 
-body, html {
-  height: 50%;
-  padding: 50px;
-  margin: 10px;
-  font-family: sans-serif;
-  background-color: rgb(40, 117, 148);
+h1 {
+  text-align: center;
 }
-
+/* 
 a {
   text-decoration: none;
   color: #1d196a;
@@ -18,16 +22,17 @@ a {
   transition: color .1s;
   margin: 1px;
   padding: 1px;
- }
+ } */
 
-a:hover {
+
+/* a:hover {
   color: rgb(20, 199, 20);
-}
+} */
 
 .btn {
   background-color: #165ea6;
-  border: 10;
-  padding: 2%;
+  /* border: 10;
+  padding: 2%; */
   color: rgb(86, 40, 40);
   font-weight: bold;
   font-size: large;
@@ -35,60 +40,60 @@ a:hover {
   cursor: pointer;
   border-radius: 5px;
 }
-
+/*  */
 .btn:hover {
   background-color: rgb(40, 80, 40);
   font-weight: 100;
-}
+} 
 
-.b {
+/* .b {
   margin: 0px;
   padding: 0px;
   color: rgb(71, 106, 187);
-}
+}  */
 
-nav {
+/* .navbar {
   margin: 1px;
   padding: 2px;
   background-color: rgb(15, 120, 163);
-}
+  text-align: center;
+} */
 
-article {
+/* article {
   padding: 5%;
   border-radius: 2px;
   border: 1px solid rgb(10, 9, 10);
-}
+} */
 
 .form-input {
-  margin-bottom: 120%;
   display: block;
   border: 1px solid rgb(146, 30, 30);
-}
+} 
 
-div {
+/* div {
   display:block;
   padding: 10px;
   border: 3px solid rgb(178, 15, 39);
   border-color: rgb(26, 6, 6);
   background-color: rgb(88, 128, 158);
-}
+} */
 
-.wrapper {
+/* .wrapper {
   width: 80%;
   min-height: 100%;
   max-width: 800px;
   margin: 1% auto;
   display: flex;
   flex-direction: column;
-}
+} */
 
 
-header h1 {
+/* header h1 {
   font-size: 2em;
   color: rgb(19, 16, 16);
-}
+} */
 
-h2 {
+/* h2 {
   padding: 1%;
   margin-bottom: 1%;
 }
@@ -96,9 +101,9 @@ h2 {
 h3 {
   padding: 1%;
   margin-bottom: 1%;
-}
+} */
 
-main {
+/* main {
   flex: 5;
   padding: 1% 5%;
   color: black;
@@ -122,4 +127,4 @@ label {
 .hero {
   padding: 5%;
   margin-bottom: 1%;
-}
+} */

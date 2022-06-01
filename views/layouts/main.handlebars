@@ -5,26 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Workout Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="wrapper">
       <header class="hero">
           <div>
-            <nav class"nav">
-                    <a class="link" href="/">Feed</a>
-                    <a class="link" href="/dashboard">My Workouts</a>
-                    {{#if loggedIn}}
-                    <a class="link" id="logout">Logout</a>
-                    {{!-- <a class="link" href="/logout" id="logout">Logout</a> --}}
-                    {{else}}
-                    <a class="link" href="/login">Login</a>
-                    {{/if}}
-                </nav>          
+              
+
+              <nav class="navbar bg-light">
+                <div class="container-fluid">
+                  {{!-- <a class="navbar-brand" href="#">Home</a> --}}
+                  <a class="navbar-brand" href="/">Feed</a>
+                  <a class="link" href="/dashboard">My Workouts</a>
+                  {{#if loggedIn}}
+                  <a class="link" id="logout">Logout</a>
+                  {{!-- <a class="link" href="/logout" id="logout">Logout</a> --}}
+                  {{else}}
+                  <a class="link" href="/login">Login</a>
+                  {{/if}}
+                </div>
+              </nav>
           </div>
 
-          <h1 class="app-title"><i class="fab "></i>Workout Tracker</h1>
+      <h1 class="app-title"><i class="fab "></i>Workout Tracker</h1>
       </header>
 
     <main>
