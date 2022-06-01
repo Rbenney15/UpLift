@@ -6,7 +6,7 @@
       <ul>
         {{#each entries as |entry|}}
         <li>
-          {{entry.exercise.exercise_name}}: {{entry.set_count}} sets/{{entry.rep_count}} reps, {{entry.weight}}, {{entry.effort}}, {{entry.rest}} rest
+          {{entry.exercise.exercise_name}}: {{entry.set_count}} sets | {{entry.rep_count}} reps | {{entry.weight}} | {{entry.effort}} | {{entry.rest}} rest |
         </li>
         {{/each}}
       </ul>
@@ -17,4 +17,4 @@
 </section>
 {{/if}}
 
-<button type="submit" class="btn"><a class="link" href="/add-workout">Log New Workout</a></button>
+<button type="submit" class="btn"><a class="link" href="/add-workout">Create Workout</a></button>
