@@ -1,6 +1,6 @@
 <section>
   <h3>Log a workout</h3>
-  <form id="add-workout-form">
+  <form id="add-workout-form" autocomplete="off">
     <input type="hidden" id="user-id" value="{{user_id}}">
 
     <label class="form-label" for="exercise-select">Add an exercise</label>
@@ -23,8 +23,9 @@
     <button id="add-entry">Add!</button>
 
     <ul id="active-list"></ul>
+    <button id="add-workout" type="submit">Create!</button>
 
   </form>
 </section>
 
-{{!-- <script src="javascript/addworkout.js"></script> --}}
+<script src="javascript/addworkout.js"></script>
