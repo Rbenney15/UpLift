@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Workout, Category, Exercise, Entry } = require('../models');
 const withAuth = require('../utils/auth');
+const formatEntry = require('../utils/format')
 
 // dashboard/ - Return latest 5 workouts
 router.get('/', withAuth, (req, res) => {
@@ -35,7 +36,14 @@ router.get('/', withAuth, (req, res) => {
         greeting: req.session.username,
         loggedIn: req.session.loggedIn,
         all: trimmed.length === 0? true : false,
-        posts: dbWorkoutData.map(workout => workout.get({ plain: true }))
+        posts: dbWorkoutData.map(workout => {
+          const plain =  workout.get({ plain: true });
+
+          for (let entry of plain.entries) {
+            entry["string"] = formatEntry(entry);
+          }
+          return plain;
+        })
       })
     })
     .catch(err => {
@@ -83,6 +91,5 @@ router.get('/all', withAuth, (req, res) => {
       res.sendStatus(500);
     })
 });
-
 
 module.exports = router;
