@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Workout, Entry, Exercise, User } = require('../models');
+const formatEntry = require('../utils/format');
 
 router.get('/', (req, res) => {
   if (!req.session.loggedIn) {
@@ -33,7 +34,14 @@ router.get('/', (req, res) => {
       {
         greeting: req.session.username,
         loggedIn: req.session.loggedIn,
-        posts: dbWorkoutData.map(workout => workout.get({ plain: true }))
+        posts: dbWorkoutData.map(workout => {
+          const plain =  workout.get({ plain: true });
+
+          for (let entry of plain.entries) {
+            entry["string"] = formatEntry(entry);
+          }
+          return plain;
+        })
       })
     })
     .catch (err => {
