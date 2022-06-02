@@ -43,9 +43,9 @@ SO THAT I
 * Rob Benney
     * https://github.com/Rbenney15
 * Seth Keating
-    * https://github.com/
+    * https://github.com/abel-baker
 * Badara Dia
-    * https://github.com/
+    * https://github.com/PapaCode79
 
 ## Project Links
 * Deployed:
