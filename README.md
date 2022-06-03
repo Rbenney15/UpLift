@@ -1,12 +1,14 @@
-# Project-Two
+# UpLift
 
 ## Description
-
+We have created a fitness tracker that allows a user to track their workouts and share workouts with their fitness community. 
 
 ## User Story
-AS A 
-I WANT 
-SO THAT I 
+AS a user I want to be able to track my workouts
+SO I stay motivated to continue my fitness journey
+AS a user I want to view what other workouts people are doing
+SO I learn new workouts to shake up my fitness routine
+
 
 ## Features
 * This application was created with a combination of the following:
@@ -52,3 +54,4 @@ SO THAT I
 
 
 * Repository:
+https://github.com/Rbenney15/UpLift.git
