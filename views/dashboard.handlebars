@@ -2,20 +2,12 @@
 <section>
   <h2>Your Workouts</h2>
     {{#each posts as |post|}}
-    <div class="card">
-      <div class="card-body">
-       <p>Workout: {{post.createdAt}}
-         <ul>
-           {{#each entries as |entry|}}
-           <li>
-             {{entry.exercise.exercise_name}}: {{entry.set_count}} sets/{{entry. rep_count}} reps, {{entry.weight}}, {{entry.effort}}, {{entry.rest}}  rest
-           </li>
-           {{/each}}
-         </ul>
-       </p>
-      </div>
-    </div>
-    {{!-- <p>Workout: {{post.createdAt}}
+
+
+<div class="card">
+  <div class="card-body">
+
+    <p>Workout: {{post.createdAt}}
       <ul>
         {{#each entries as |entry|}}
         <li>
@@ -24,11 +16,11 @@
         </li>
         {{/each}}
       </ul>
-    </p> --}}
+    </p> 
     {{/each}}
+</div>
+</div>
 
-    </p>
-    {{/each}}
 
 </section>
 {{/if}}
