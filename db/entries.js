@@ -7,7 +7,8 @@ const entriesData = [
         exercise_id: '1',
         set_count: '3',
         rep_count: '10',
-        weight: '25 lbs',
+        weight: '25',
+        effort: 'Light',
         rest: '1 minute'
     },
     {
@@ -15,7 +16,8 @@ const entriesData = [
         exercise_id: '2',
         set_count: '3',
         rep_count: '10',
-        weight: '30 lbs',
+        weight: '30',
+        effort: 'medium',
         rest: '1 minute'
     },
     // ROB 2
@@ -29,7 +31,7 @@ const entriesData = [
         exercise_id: '8',
         set_count: '3',
         rep_count: '8',
-        weight: '125 lbs',
+        weight: '125',
         rest: '1 minute'
     },
     {
@@ -53,7 +55,7 @@ const entriesData = [
         exercise_id: '1',
         set_count: '3',
         rep_count: '10',
-        weight: '25 lbs',
+        weight: '25',
         rest: '1 minute'
     },
 ];

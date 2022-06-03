@@ -72,7 +72,7 @@ function addEntry(event) {
 const formatEntry = (content) => {
   const sets = content.sets? `${content.sets} sets` : '';
   const reps = content.reps? `${content.reps} reps` : '';
-  const setrep = sets || reps? [sets, reps].filter(Boolean).join('/') : '';
+  const setrep = sets || reps? [sets, reps].filter(Boolean).join(', ') : '';
   const rest = content.rest? `rest for ${content.rest}` : '';
 
   const entry = [setrep, content.weight, rest, content.effort].filter(Boolean).join(', ');
