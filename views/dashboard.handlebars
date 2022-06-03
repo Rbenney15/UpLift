@@ -2,19 +2,54 @@
 <section>
   <h2>Your Workouts</h2>
     {{#each posts as |post|}}
-    <p>Workout: {{post.createdAt}}
-      <ul>
-        {{#each entries as |entry|}}
-        <li>
-          {{entry.exercise.exercise_name}}: {{entry.set_count}} sets/{{entry.rep_count}} reps, {{entry.weight}}, {{entry.effort}}, {{entry.rest}} rest
-        </li>
-        {{/each}}
-      </ul>
-
-    </p>
+    <div class="card">
+      <div class="card-body">
+       <p>Workout: {{post.createdAt}}
+         <ul>
+           {{#each entries as |entry|}}
+           <li>
+             {{entry.exercise.exercise_name}}: {{entry.set_count}} sets/{{entry. rep_count}} reps, {{entry.weight}}, {{entry.effort}}, {{entry.rest}}  rest
+           </li>
+           {{/each}}
+         </ul>
+       </p>
+      </div>
+    </div>
     {{/each}}
+
+    {{!-- <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Exercise Name</th>
+          <th scope="col">Sets</th>
+          <th scope="col">Reps</th>
+          <th scope="col">Weight</th>
+          <th scope="col">Effort Taken</th>
+          <th scope="col">Rest Time</th>
+        </tr>
+      </thead>
+    {{#each posts as |post|}}
+      <tbody>
+        <tr>
+          <th scope="row">{{post.createdAt}}</th>
+          {{#each entries as |entry|}}
+          <td>{{entry.exercise.exercise_name}}</td>
+          <td>{{entry.set_count}}</td>
+          <td>{{entry.rep_count}}</td>
+          <td>{{entry.weight}}</td>
+          <td>{{entry.effort}}</td>
+          <td>{{entry.rest}}</td>
+          {{/each}}
+        </tr>
+    {{/each}}
+      </tbody>
+    </table> --}}
+    
 
 </section>
 {{/if}}
 
-<button type="submit" class="btn"><a class="link" href="/add-workout">Log New Workout</a></button>
+<a href="/add-workout"><button type="button" class="btn btn-primary">Log New Workout</button></a>
+
+{{!-- <button type="submit" class="btn"><a class="link" href="/add-workout">Log New Workout</a></button> --}}
