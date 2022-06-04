@@ -1,16 +1,16 @@
 <section>
+  <div class="card" style="width: 40rem;">
     <article class="post">
         {{#each posts as |post| }}
-            <p>{{post.user.username}} worked out on {{post.createdAt}}
-      <ul>
+            <p class="card-header">{{post.user.username}} worked out on {{post.createdAt}}</p>
+      <ul class="list-group list-group-flush">
         {{#each entries as |entry|}}
-        <li>
+        <li class="list-group-item">
           {{entry.exercise.exercise_name}}: {{entry.string}}
         </li>
         {{/each}}
       </ul>
-
-    </p>
-        {{/each}}    
+        {{/each}}
+  </div>          
     </article>
 </section>

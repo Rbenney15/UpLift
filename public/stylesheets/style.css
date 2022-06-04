@@ -1,4 +1,4 @@
- /* * {
+ * {
   box-sizing: border-box;
   border-color: rgb(25, 25, 233);
 }  */
@@ -6,7 +6,7 @@
 /* h1 {
   text-align: center;
   padding: 60px;
-}  */
+} 
  
 a {
   text-decoration: none;
@@ -58,8 +58,6 @@ article {
 }  
 
 div {
-  /* width: fit-content; */
-  /* display:block; */
   padding: 3px;
   border: 3px solid rgb(28, 6, 153);
   border-color: rgb(33, 43, 189); 
@@ -82,11 +80,6 @@ header h1 {
   padding: 30px;
 } 
 
-/* main {
-  flex: 5;
-  padding: 1% 1%;
-  color: rgb(18, 18, 17);
-} */
 
  .post {
   margin-bottom: 20%;
@@ -151,11 +144,3 @@ form {
   margin: -1.5% 0 2% 0;
 }
 
-/* .upvote-btn {
-  background-color: #197d0f;
-  transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-} */

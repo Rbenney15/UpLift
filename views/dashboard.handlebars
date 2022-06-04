@@ -1,31 +1,26 @@
 {{#if posts.length}}
 <section>
-  <h2>Your Workouts</h2>
+  <h2 class="text-center">Your Workouts</h2>
     {{#each posts as |post|}}
 
-
-<div class="card">
-  <div class="card-body">
-
-    <p>Workout: {{post.createdAt}}
-      <ul>
+<div class="card bg-light" style="width: 35rem;">
+  {{!-- <div class="card-body"> --}}
+    <p class="card-header">Workout: {{post.createdAt}}</p>
+      <ul class="list-group list-group-center">
         {{#each entries as |entry|}}
-        <li>
+        <li class="list-group-item">
           {{entry.exercise.exercise_name}}: 
           {{entry.string}}
         </li>
         {{/each}}
       </ul>
-    </p> 
     {{/each}}
+  {{!-- </div>  --}}
 </div>
-</div>
-
+<a href="/add-workout"><button type="button" class="btn btn-dark">Log New Workout</button></a>
 
 </section>
 {{/if}}
 
-<a href="/add-workout"><button type="button" class="btn btn-primary">Log New Workout</button></a>
+{{!-- <a href="/add-workout"><button type="button" class="btn btn-primary">Log New Workout</button></a> --}}
 
-{{!-- <button type="submit" class="btn"><a class="link" href="/add-workout">Log New Workout</a></button> --}}
-{{!-- <button type="submit" class="btn"><a class="link" href="/add-workout">Create Workout</a></button> --}}
