@@ -14,13 +14,15 @@ async function newFormHandler(event) {
 
   const user_id = userId.value;
 
+  filteredContent = workoutContent.filter(entry => entry.li_add);
+
   const response = await fetch(`/api/workout`, {
     method: "POST",
     body: JSON.stringify({
       //   double check naming is correct
       user_id,
       // content of workout
-      content: workoutContent,
+      content: filteredContent,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -38,9 +40,12 @@ async function newFormHandler(event) {
 function addEntry(event) {
   event.preventDefault();
 
-  let lastIndex = list.lastChild ? list.lastChild.dataset.index : 0;
+  const lastChild = list.lastChild;
+  const newIndex = lastChild ? +lastChild.getAttribute("data-index") + 1 : 0;
 
   const newItem = document.createElement("li");
+  newItem.dataset.index = newIndex;
+  newItem.dataset.add = true;
 
   const entryContent = {
     sets: fieldSets.value,
@@ -50,13 +55,12 @@ function addEntry(event) {
     effort: fieldEffort.value
   };
 
-  // newItem.textContent = `${lastIndex++} ${selectExercise.options[selectExercise.selectedIndex].text}: ${fieldSets.value} sets/${fieldReps.value} reps, ${fieldWeight.value}, ${fieldRest.value} rest, ${fieldEffort.value} effort`;
-  newItem.textContent = `${selectExercise.options[selectExercise.selectedIndex].text}: ${formatEntry(entryContent)}`;
-  newItem.dataset.index = lastIndex++;
+  newItem.innerHTML = `<a href="#" onclick="deleteEntry(parentElement)" style="text-decoration: none; color: light-gray" aria-label="Remove exercise from new workout">×</a> ${selectExercise.options[selectExercise.selectedIndex].text}: ${formatEntry(entryContent)}`;
 
   const exerciseId = selectExercise.options[selectExercise.selectedIndex].value;
 
   workoutContent.push({ 
+    li_add: true,
     exercise_id: exerciseId,
     set_count: fieldSets.value,
     rep_count: fieldReps.value,
@@ -64,9 +68,13 @@ function addEntry(event) {
     rest: fieldRest.value,
     effort: fieldEffort.value
   });
-  console.log(workoutContent);
-
+  
   list.appendChild(newItem);
+}
+
+function deleteEntry(element) {
+  workoutContent[element.dataset.index].li_add = false;
+  element.remove();
 }
 
 const formatEntry = (content) => {
