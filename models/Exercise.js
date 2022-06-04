@@ -27,6 +27,10 @@ Exercise.init(
         model: 'category',
         key: 'id'
       }
+    },
+    wger_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   },
   {
