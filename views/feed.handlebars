@@ -1,7 +1,9 @@
 <section>
-    <article class="post">
+  <h2>Community Workouts</h2>
+  <div class="card">
+    <article class="card-body">
         {{#each posts as |post| }}
-            <p>{{post.user.username}} worked out on {{post.createdAt}}
+            <p class="card-header">{{post.user.username}} worked out on {{post.createdAt}}
       <ul>
         {{#each entries as |entry|}}
         <li>
@@ -11,6 +13,7 @@
       </ul>
 
     </p>
-        {{/each}}    
+        {{/each}}
+  </div>    
     </article>
 </section>

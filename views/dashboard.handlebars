@@ -1,12 +1,11 @@
 {{#if posts.length}}
 <section>
   <h2>Your Workouts</h2>
+  <a href="/add-workout">Log New Workout</a>
+
     {{#each posts as |post|}}
-
-
 <div class="card">
   <div class="card-body">
-
     <p>Workout: {{post.createdAt}}
       <ul>
         {{#each entries as |entry|}}
@@ -17,15 +16,12 @@
         {{/each}}
       </ul>
     </p> 
+</div>
+</div>
     {{/each}}
-</div>
-</div>
-
 
 </section>
 {{/if}}
 
-<a href="/add-workout"><button type="button" class="btn btn-primary">Log New Workout</button></a>
 
-{{!-- <button type="submit" class="btn"><a class="link" href="/add-workout">Log New Workout</a></button> --}}
-{{!-- <button type="submit" class="btn"><a class="link" href="/add-workout">Create Workout</a></button> --}}
+

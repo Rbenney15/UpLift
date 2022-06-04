@@ -16,13 +16,13 @@
               <nav class="navbar bg-light">
                 <div class="container-fluid">
                   {{!-- <a class="navbar-brand" href="#">Home</a> --}}
-                  <a class="link" href="/">Feed</a>
-                  <a class="link" href="/dashboard">My Workouts</a>
+                  <a class="navbar-brand" href="/">Feed</a>
+                  <a class="navbar-brand" href="/dashboard">My Workouts</a>
                   {{#if loggedIn}}
                   {{!-- <a class="link" href="logout">Logout</a> --}}
-                  <a class="link" href="/logout" id="logout">Logout</a>
+                  <a class="navbar-brand" href="/logout" id="logout">Logout</a>
                   {{else}}
-                  <a class="link" href="/login">Login</a>
+                  <a class="navbar-brand" href="/login">Login</a>
                   {{/if}}
                 </div>
               </nav>
