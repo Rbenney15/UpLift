@@ -3,23 +3,25 @@
   <h2>Your Workouts</h2>
   <a href="/add-workout">Log New Workout</a>
 
-    {{#each posts as |post|}}
-<div class="card">
-  <div class="card-body">
-    <p>Workout: {{post.createdAt}}
-      <ul>
-        {{#each entries as |entry|}}
-        <li>
-          {{entry.exercise.exercise_name}}: 
-          {{entry.string}}
-        </li>
-        {{/each}}
-      </ul>
-    </p> 
-</div>
-</div>
-    {{/each}}
-
+  {{#each posts as |post|}}
+  <div class="card">
+    <div class="card-body">
+      <p>Workout: {{post.createdAt}}
+        <ul>
+        
+          {{#each entries as |entry|}}
+          <li>
+            {{entry.exercise.exercise_name}}: 
+            {{entry.string}}
+          </li>
+          {{/each}}
+          
+        </ul>
+      </p> 
+    </div>
+  </div>
+  {{/each}}
+  
 </section>
 {{/if}}
 
