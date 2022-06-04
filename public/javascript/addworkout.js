@@ -14,7 +14,7 @@ async function newFormHandler(event) {
 
   const user_id = userId.value;
 
-  workoutContent = workoutContent.filter(entry => entry.li_add);
+  filteredContent = workoutContent.filter(entry => entry.li_add);
 
   const response = await fetch(`/api/workout`, {
     method: "POST",
@@ -22,7 +22,7 @@ async function newFormHandler(event) {
       //   double check naming is correct
       user_id,
       // content of workout
-      content: workoutContent,
+      content: filteredContent,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -55,12 +55,12 @@ function addEntry(event) {
     effort: fieldEffort.value
   };
 
-  newItem.innerHTML = `<a href="#" onclick="parentElement.dataset.add=false; parentElement.style.display='none'">x</a> ${selectExercise.options[selectExercise.selectedIndex].text}: ${formatEntry(entryContent)}`;
+  newItem.innerHTML = `<a href="#" onclick="deleteEntry(parentElement)" style="text-decoration: none; color: light-gray" aria-label="Remove exercise from new workout">×</a> ${selectExercise.options[selectExercise.selectedIndex].text}: ${formatEntry(entryContent)}`;
 
   const exerciseId = selectExercise.options[selectExercise.selectedIndex].value;
 
   workoutContent.push({ 
-    li_add: newItem.dataset.add,
+    li_add: true,
     exercise_id: exerciseId,
     set_count: fieldSets.value,
     rep_count: fieldReps.value,
@@ -70,6 +70,11 @@ function addEntry(event) {
   });
   
   list.appendChild(newItem);
+}
+
+function deleteEntry(element) {
+  workoutContent[element.dataset.index].li_add = false;
+  element.remove();
 }
 
 const formatEntry = (content) => {
