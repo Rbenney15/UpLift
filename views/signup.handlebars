@@ -1,23 +1,21 @@
-<div class="card">
-  <h3 class="card-header">Sign Up</h3>
+<div class="card" style="width: 70rem;">
+  <h3 class="card-header text-center">Sign Up</h3>
   <form id="signup-form" class="card-body">
-    <label for="username-signup" class="form-label">Username</label>
+    <label for="username-signup" class="form-label"><strong>Username</strong></label>
     <input id="username-signup" type="text" class="form-input" />
 
-    <label class="form-label" for="email-signup">Email</label>
+    <label class="form-label" for="email-signup"><strong>Email</strong></label>
     <input id="email-signup" type="text" class="form-input" />
 
-    <label class="form-label" for="password-signup">Password</label>
+    <label class="form-label" for="password-signup"><strong>Password</strong></label>
     <input  id="password-signup" type="password" class="form-input" />
 
-
-    {{!-- <button type="submit" class="btn">Signup!</button>
-    <a class="login-link" href="/login">Login</a> --}}
-
-  <div class="d-grid gap-2 d-md-block">
+    <button class="btn btn-dark" type="submit">Signup</button>
+    <a href="/login"><button type="button" class="btn btn-dark">Login</button></a>
+  {{!-- <div class="d-grid gap-2 d-md-block">
       <button class="btn btn-dark" type="submit">Signup</button>
       <a href="/login"><button type="button" class="btn btn-dark">Login</button></a>
-  </div>
+  </div> --}}
   </form>
 </div>
 
