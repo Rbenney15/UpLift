@@ -2,18 +2,21 @@
   <h2>Community Workouts</h2>
   <div class="card">
     <article class="card-body">
-        {{#each posts as |post| }}
-            <p class="card-header">{{post.user.username}} worked out on {{post.createdAt}}
+    
+    {{#each posts as |post| }}
+    <p class="card-header">{{post.user.username}} worked out on {{post.createdAt}}
       <ul>
+      
         {{#each entries as |entry|}}
         <li>
           {{entry.exercise.exercise_name}}: {{entry.string}}
         </li>
         {{/each}}
+        
       </ul>
-
     </p>
-        {{/each}}
+    {{/each}}
+    
   </div>    
-    </article>
+  </article>
 </section>
