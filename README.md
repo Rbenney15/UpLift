@@ -1,4 +1,13 @@
 # UpLift
+Login
+<img width="1584" alt="image" src="https://user-images.githubusercontent.com/98703735/172058148-8984aa03-5002-491f-a8eb-9213aafe0ce3.png">
+
+User Dashboard
+<img width="1589" alt="image" src="https://user-images.githubusercontent.com/98703735/172058232-70569079-fbaa-4381-8750-8a7a259cacd1.png">
+
+Community Workouts Feed
+<img width="1586" alt="image" src="https://user-images.githubusercontent.com/98703735/172058274-a721e724-8924-4d40-9431-3f9b1cbb0b70.png">
+
 
 ## Description
 We have created a fitness tracker that allows a user to track their workouts and share workouts with their fitness community. 
@@ -51,7 +60,7 @@ SO I learn new workouts to shake up my fitness routine
 
 ## Project Links
 * Deployed:
-
+https://uplift-srb.herokuapp.com/login
 
 * Repository:
 https://github.com/Rbenney15/UpLift.git
