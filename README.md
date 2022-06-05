@@ -51,7 +51,7 @@ SO I learn new workouts to shake up my fitness routine
 
 ## Project Links
 * Deployed:
-
+https://uplift-srb.herokuapp.com/login
 
 * Repository:
 https://github.com/Rbenney15/UpLift.git
