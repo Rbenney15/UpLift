@@ -1,5 +1,7 @@
 # UpLift
 
+<img width="1584" alt="image" src="https://user-images.githubusercontent.com/98703735/172058148-8984aa03-5002-491f-a8eb-9213aafe0ce3.png">
+
 ## Description
 We have created a fitness tracker that allows a user to track their workouts and share workouts with their fitness community. 
 
