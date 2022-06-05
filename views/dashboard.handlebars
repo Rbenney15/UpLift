@@ -1,21 +1,29 @@
 {{#if posts.length}}
 <section>
   <h2>Your Workouts</h2>
-    {{#each posts as |post|}}
-    <p>Workout: {{post.createdAt}}
-      <ul>
-        {{#each entries as |entry|}}
-        <li>
-          {{entry.exercise.exercise_name}}: 
-          {{entry.string}}
-        </li>
-        {{/each}}
-      </ul>
+  <a href="/add-workout">Log New Workout</a>
 
-    </p>
-    {{/each}}
-
+  {{#each posts as |post|}}
+  <div class="card">
+    <div class="card-body">
+      <p>Workout: {{post.createdAt}}
+        <ul>
+        
+          {{#each entries as |entry|}}
+          <li>
+            {{entry.exercise.exercise_name}}: 
+            {{entry.string}}
+          </li>
+          {{/each}}
+          
+        </ul>
+      </p> 
+    </div>
+  </div>
+  {{/each}}
+  
 </section>
 {{/if}}
 
-<button type="submit" class="btn"><a class="link" href="/add-workout">Create Workout</a></button>
+
+
