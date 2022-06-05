@@ -1,9 +1,9 @@
 a {
   font-weight: bold;
   transition: inherit;
-  background-color: #2ba9df; 
+  background-color: rgb(248, 245, 245); 
   margin: 5px;
-  padding: 5px;
+  padding: 3px;
   border-radius: 5px;
   border: 2px solid rgb(10, 9, 10);
 } 
@@ -12,7 +12,8 @@ article {
   padding: 1px;
   margin: 5px;
   border-radius: 5px;
-  border: 1px solid rgb(10, 9, 10);
+  border: 2px solid rgb(10, 9, 10);
+  background-color: rgb(247, 247, 245);
 }  
 
 .form-input {
@@ -21,23 +22,23 @@ article {
 
 button {
   border: 2px solid black;
-  background-color: rgb(80, 173, 219);
+  background-color: rgb(159, 172, 179);
   border-radius: 5px;
 }
 
 label {
   border: 2px solid black;
-  background-color: rgb(152, 175, 152);
+  background-color: rgb(223, 229, 223);
   margin: 2px;
   padding: 2px;
 }
 
 div {
   margin: 5px; 
-  padding: 5px;
-  border: 3px solid rgb(28, 6, 153);
-  border-color: rgb(51, 58, 149); 
-  background-color: rgb(118, 148, 166);
+  padding: 10px;
+  border: 3px solid black;
+  border-color: black; 
+  background-color: rgb(211, 214, 215);
 } 
 
 header h1 {
@@ -46,12 +47,3 @@ header h1 {
   text-align: center;
   padding: 30px;
 } 
-
-.post {
-  margin-bottom: 20%;
-  line-height: 250%;
-  border: 3px solid rgb(28, 6, 153);
-  background-color: rgb(66, 162, 204);
-  margin-bottom: 2%;
-  line-height: 150%;
-}
