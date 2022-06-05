@@ -1,18 +1,36 @@
 <section>
   <h2>Community Workouts</h2>
   <div class="card">
+<<<<<<< HEAD
   <article class="card-body">
         {{#each posts as |post| }}
       <p class="card-header">{{post.user.username}} worked out on {{post.createdAt}}
+=======
+    <article class="card-body">
+    
+    {{#each posts as |post| }}
+    <p class="card-header">{{post.user.username}} worked out on {{post.createdAt}}
+>>>>>>> ed8cc993ed2aad777300bb056bc47354568083bc
       <ul>
+      
         {{#each entries as |entry|}}
          <li>
            {{entry.exercise.exercise_name}}: {{entry.string}}
          </li>
         {{/each}}
+        
       </ul>
+<<<<<<< HEAD
       </p>
         {{/each}}
   </div>    
   </article>
 </section>
+=======
+    </p>
+    {{/each}}
+    
+  </div>    
+  </article>
+</section>
+>>>>>>> ed8cc993ed2aad777300bb056bc47354568083bc
