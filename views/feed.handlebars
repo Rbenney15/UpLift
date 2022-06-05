@@ -1,16 +1,22 @@
 <section>
-    <article class="post">
-        {{#each posts as |post| }}
-            <p>{{post.user.username}} worked out on {{post.createdAt}}
+  <h2>Community Workouts</h2>
+  <div class="card">
+    <article class="card-body">
+    
+    {{#each posts as |post| }}
+    <p class="card-header">{{post.user.username}} worked out on {{post.createdAt}}
       <ul>
+      
         {{#each entries as |entry|}}
         <li>
           {{entry.exercise.exercise_name}}: {{entry.string}}
         </li>
         {{/each}}
+        
       </ul>
-
     </p>
-        {{/each}}    
-    </article>
+    {{/each}}
+    
+  </div>    
+  </article>
 </section>
