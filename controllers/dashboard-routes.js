@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Workout, Category, Exercise, Entry } = require('../models');
 const withAuth = require('../utils/auth');
-const formatEntry = require('../utils/format')
+const formatEntry = require('../utils/format');
+const friendlyDate = require('../utils/friendlydate');
 
 // dashboard/ - Return latest 5 workouts
 router.get('/', withAuth, (req, res) => {
@@ -38,6 +39,8 @@ router.get('/', withAuth, (req, res) => {
         all: trimmed.length === 0? true : false,
         posts: dbWorkoutData.map(workout => {
           const plain =  workout.get({ plain: true });
+
+          plain["friendlyTimestamp"] = friendlyDate(plain.createdAt);
 
           for (let entry of plain.entries) {
             entry["string"] = formatEntry(entry);
