@@ -4,7 +4,7 @@
     <article class="card-body">
     
     {{#each posts as |post| }}
-    <p class="card-header">{{post.user.username}} worked out on {{post.createdAt}}
+    <p class="card-header">{{post.user.username}} worked out on {{post.friendlyTimestamp}}
       <ul>
       
         {{#each entries as |entry|}}
