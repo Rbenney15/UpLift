@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Workout, Entry, Exercise, User } = require('../models');
 const formatEntry = require('../utils/format');
+const friendlyDate = require('../utils/friendlydate');
 
 router.get('/', (req, res) => {
   if (!req.session.loggedIn) {
@@ -36,6 +37,8 @@ router.get('/', (req, res) => {
         loggedIn: req.session.loggedIn,
         posts: dbWorkoutData.map(workout => {
           const plain =  workout.get({ plain: true });
+
+          plain["friendlyTimestamp"] = friendlyDate(plain.createdAt);
 
           for (let entry of plain.entries) {
             entry["string"] = formatEntry(entry);
