@@ -1,141 +1,45 @@
- body {
-
- }
-
- .wrapper {
-
- }
-
- header {
-
- }
- 
- title {
-
- }
-
- h3 {
-
- }
-
- h4 {
-
-
- }
-
- input {
-
- }
-
- #button {
-    
- }
-
- .btn {
-
- }
-
-
- #btn {
-
- }
-
- #form {
-
- }
-
-#label {
-
-}
-
-
- 
-/* h1 {
-  text-align: center;
-  padding: 60px;
-}  */
- 
 a {
   font-weight: bold;
   transition: inherit;
-  background-color: #2ba9df; 
+  background-color: rgb(248, 245, 245); 
   margin: 5px;
-  padding: 5px;
+  padding: 3px;
   border-radius: 5px;
   border: 2px solid rgb(10, 9, 10);
 } 
-
-  /* a:hover {
-  color: rgb(20, 199, 20);
-}     */
-
-/* .btn {
-  background-color: #165ea6;
-  border: 10;
-  padding: 2%; 
-  color: black;
-  font-weight: bold;
-  font-size: large;
-  transition: background-color .1s; 
-  cursor: pointer;
-  border-radius: 10px;
-}  */
- 
-/* .btn:hover {
-  background-color: rgb(31, 212, 31);
-  font-weight: 100;
-}   */
-
-/* .nav {
-  margin: 10px;
-  padding: 10px;
-  /* background-color: rgb(230, 17, 17); 
-  text-align: center;
-}  */
 
 article {
   padding: 1px;
   margin: 5px;
   border-radius: 5px;
-  border: 1px solid rgb(10, 9, 10);
+  border: 2px solid rgb(10, 9, 10);
+  background-color: rgb(247, 247, 245);
 }  
 
 .form-input {
-  /* display: block; */
   border: 3px solid black;
 }
 
 button {
   border: 2px solid black;
-  background-color: rgb(80, 173, 219);
+  background-color: rgb(159, 172, 179);
   border-radius: 5px;
 }
 
 label {
   border: 2px solid black;
-  background-color: rgb(152, 175, 152);
+  background-color: rgb(223, 229, 223);
   margin: 2px;
   padding: 2px;
 }
 
 div {
-  /* width: fit-content; 
-  display:block; */
   margin: 5px; 
-  padding: 5px;
-  border: 3px solid rgb(28, 6, 153);
-  border-color: rgb(51, 58, 149); 
-  background-color: rgb(118, 148, 166);
+  padding: 10px;
+  border: 3px solid black;
+  border-color: black; 
+  background-color: rgb(211, 214, 215);
 } 
-
-/* .wrapper {
-  width: 100%;
-  min-height: 80%;
-  max-width: 900px;
-  margin: 5px auto;
-  display: flex;
-  flex-direction: column;
-}  */
 
 header h1 {
   font-size: 2em;
@@ -143,62 +47,3 @@ header h1 {
   text-align: center;
   padding: 30px;
 } 
-
-/* main {
-  flex: 5;
-  padding: 1% 1%;
-  color: rgb(18, 18, 17);
-} */
-
- .post {
-  margin-bottom: 20%;
-  line-height: 250%;
-  border: 3px solid rgb(28, 6, 153);
-  background-color: rgb(66, 162, 204);
-} 
-
-/* form {
-  margin-bottom: 4%;
-  margin-left: 2%;
-  margin-inline-start: 1%;
-} */
-
-/* #feed-table {
-  background-color: #225ca3;
-} */
- 
-/* .hero {
-  padding: 3%;
-  /* margin-bottom: 1%; 
-}   */
-/* .btn-no-style {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
-  font-weight: bold;
-  transition: color .1s;
-  margin-left: 16px;
-} */
-
-/* .btn-no-style:hover {
-  background: none;
-  color: #3486eb;
-} */
-
-.post {
-  margin-bottom: 2%;
-  line-height: 150%;
-}
-
-/* .upvote-btn {
-  background-color: #197d0f;
-  transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-} */
