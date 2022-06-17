@@ -63,4 +63,4 @@ SO I learn new workouts to shake up my fitness routine
 https://uplift-srb.herokuapp.com/login
 
 * Repository:
-https://github.com/Rbenney15/UpLift.git
+https://github.com/Rbenney15/UpLift
