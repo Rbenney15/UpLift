@@ -16,22 +16,22 @@ article {
   background-color: rgb(247, 247, 245);
 }  
 
-.form-input {
+/* .form-input {
   border: 3px solid black;
-}
+} */
 
-button {
+/* button {
   border: 2px solid black;
   background-color: rgb(159, 172, 179);
   border-radius: 5px;
-}
+} */
 
-label {
+/* label {
   border: 2px solid black;
   background-color: rgb(223, 229, 223);
   margin: 2px;
   padding: 2px;
-}
+} */
 
 div {
   margin: 5px; 
@@ -40,10 +40,104 @@ div {
   border-color: black; 
   background-color: rgb(211, 214, 215);
 } 
+.card-header {
+  font: normal 25px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
 
 header h1 {
   font-size: 2em;
   color: black;
   text-align: center;
-  padding: 30px;
+  padding: 15px;
 } 
+
+
+/* New CSS */
+body {
+  font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  background: #3AAFAB;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 0 8px;
+  justify-content: space-between;
+}
+
+.flex-outer>li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.flex-outer>li>label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer>li>label+*,
+.flex-inner {
+  flex: 1 0 220px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea {
+  padding: 15px;
+  border: none;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+.flex-inner li {
+  width: 100px;
+}
