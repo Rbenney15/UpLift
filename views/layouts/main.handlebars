@@ -6,33 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UpLift</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="wrapper">
-      <header class="hero">
-          <div> 
-              <nav class="navbar bg-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="/">Community Workouts</a>
-                  <a class="navbar-brand" href="/dashboard">My Workouts</a>
-                  {{#if loggedIn}}
-                  <a class="navbar-brand" href="/logout" id="logout">Logout</a>
-                  {{else}}
-                  <a class="navbar-brand" href="/login">Login</a>
-                  {{/if}}
-                </div>
-              </nav>
-          </div>
-
-      <h1 class="app-title"><i class="fab "></i>UpLift</h1>
+      <header>
+        <h1 class="app-title"><i class="fab"></i>UpLift</h1>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <button class="btn-group"><a class="nav-item" href="/">Community Workouts</a></button>
+            </li>
+            <li class="nav-item"></li>
+              <button class="btn-group"><a class="nav-item" href="/dashboard">My Workouts</a></button>
+            </li>
+            {{#if loggedIn}}
+            <li class="nav-item"></li>
+              <button class="btn-group"><a class="nav-item" href="/logout" id="logout">Logout</a></button>
+            </li>
+            {{else}}
+            <li class="nav-item"></li>
+              <button class="btn-group"><a class="nav-item" href="/login">Login</a></button>
+            </li>
+            {{/if}}
+        </ul>
       </header>
 
     <main>
       {{{ body }}}
     </main>
-  </div>
 
     {{#if loggedIn}}
     <script src="javascript/logout.js"></script>
