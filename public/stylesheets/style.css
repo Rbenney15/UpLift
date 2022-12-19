@@ -20,11 +20,11 @@ article {
   background-color: rgb(247, 247, 245);
 }  
 .nav-item {
-text-decoration: none;
-text-align: center;
-font-size: medium;
-color: black;
-padding: 1px;
+  text-decoration: none;
+  text-align: center;
+  font-size: medium;
+  color: black;
+  padding: 1px;
 }
 
 .btn-group {
@@ -142,7 +142,7 @@ body {
   border: none;
 }
 
-.flex-outer li button {
+/* .flex-outer li button {
   margin-left: auto;
   padding: 8px 16px;
   border: none;
@@ -151,7 +151,7 @@ body {
   text-transform: uppercase;
   letter-spacing: .09em;
   border-radius: 2px;
-}
+} */
 
 .flex-inner li {
   width: 100px;
