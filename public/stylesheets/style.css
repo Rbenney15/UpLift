@@ -29,6 +29,7 @@ article {
 }
 h2 {
   text-align: center;
+  color: white;
 }
 .btn-group {
   padding: 3px;
@@ -36,50 +37,41 @@ h2 {
   text-align: center;
 }
 
-/* .form-input {
-  border: 3px solid black;
-} */
-
-/* button {
-  border: 2px solid black;
-  background-color: rgb(159, 172, 179);
-  border-radius: 5px;
-} */
-
-/* label {
-  border: 2px solid black;
-  background-color: rgb(223, 229, 223);
-  margin: 2px;
-  padding: 2px;
-} */
-
 /* div {
   margin: 5px; 
   padding: 10px;
   border: 3px solid black;
   border-color: black; 
   border-radius: 8px;
-  /* background-color: #73dd94; */
-  /* background-color: rgb(247, 247, 245); */
-
+  background-color: #73dd94;
+  background-color: rgb(247, 247, 245);
+} */
 .container {
     margin: 5px;
     padding: 10px;
-    border: 3px solid black;
-    border-color: black;
-    border-radius: 8px;
-    /* background-color: #73dd94; */
-    background-color: rgb(247, 247, 245);
-  }
+    /* border: 3px solid black;
+    border-color: black; */
+    border-radius: 5px;
+    /* background-color: rgb(247, 247, 245); */
+}
 
-
-/* .card-body {
+.card {
   margin: 5px;
   padding: 10px;
-  border: 3px solid black;
-  border-color: black;
-  background-color: #73dd94;
-} */
+  border-radius: 5px;
+  /* border: 3px solid black;
+  border-color: black; */
+  background-color: rgb(215, 215, 212);
+}
+
+.card-body {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  /* border: 3px solid black;
+  border-color: black; */
+  background-color: rgb(215, 215, 212);
+}
 
 .card-header {
   font: normal 20px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
@@ -88,11 +80,45 @@ h2 {
 
 header h1 {
   font-size: 2em;
-  color: black;
+  color: white;
   text-align: left;
   padding: 0 0 0 25px;
 } 
 
+/* TOP NAV BAR */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
 
 /* New CSS */
 body {
@@ -106,6 +132,7 @@ body {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: white;
 }
 
 .container * {

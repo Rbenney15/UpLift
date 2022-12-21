@@ -9,48 +9,27 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
-<header>
-  <h1 class="app-title"><i class="fab"></i>UpLift</h1>
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <button class="btn-group"><a class="nav-item" href="/">Community Workouts</a></button>
-    </li>
-    <li class="nav-item"></li>
-    <button class="btn-group"><a class="nav-item" href="/dashboard">My Workouts</a></button>
-    </li>
-    {{#if loggedIn}}
-    <li class="nav-item"></li>
-    <button class="btn-group"><a class="nav-item" href="/logout" id="logout">Logout</a></button>
-    </li>
-    {{else}}
-    <li class="nav-item"></li>
-    <button class="btn-group"><a class="nav-item" href="/login">Login</a></button>
-    </li>
-    {{/if}}
-  </ul>
-</header>
-
 <body>
-      {{!-- <header>
-        <h1 class="app-title"><i class="fab"></i>UpLift</h1>
+    <header class="topnav" id="myTopnav">
+      <h1 class="app-title"><i class="fa fa-bars"></i>UpLift</h1>
         <ul class="nav justify-content-end">
-            <li class="nav-item">
-              <button class="btn-group"><a class="nav-item" href="/">Community Workouts</a></button>
-            </li>
-            <li class="nav-item"></li>
-              <button class="btn-group"><a class="nav-item" href="/dashboard">My Workouts</a></button>
-            </li>
-            {{#if loggedIn}}
-            <li class="nav-item"></li>
-              <button class="btn-group"><a class="nav-item" href="/logout" id="logout">Logout</a></button>
-            </li>
-            {{else}}
-            <li class="nav-item"></li>
-              <button class="btn-group"><a class="nav-item" href="/login">Login</a></button>
-            </li>
-            {{/if}}
+          <li class="nav-item"></li>
+          <button class="btn-group"><a class="nav-item" href="/dashboard">My Workouts</a></button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-group"><a class="nav-item" href="/">Community Workouts</a></button>
+          </li>
+          {{#if loggedIn}}
+          <li class="nav-item"></li>
+            <button class="btn-group"><a class="nav-item" href="/logout" id="logout">Logout</a></button>
+          </li>
+          {{else}}
+          <li class="nav-item"></li>
+            <button class="btn-group"><a class="nav-item" href="/login">Login</a></button>
+          </li>
+          {{/if}}
         </ul>
-      </header> --}}
+      </header>
 
     <main>
       {{{ body }}}
