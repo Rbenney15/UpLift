@@ -19,6 +19,7 @@ article {
   border: 2px solid rgb(10, 9, 10);
   background-color: rgb(247, 247, 245);
 }  
+
 .nav-item {
   text-decoration: none;
   text-align: center;
@@ -26,9 +27,13 @@ article {
   color: black;
   padding: 1px;
 }
-
+h2 {
+  text-align: center;
+}
 .btn-group {
   padding: 3px;
+  display:flex;
+  text-align: center;
 }
 
 /* .form-input {
@@ -48,16 +53,37 @@ article {
   padding: 2px;
 } */
 
-div {
+/* div {
   margin: 5px; 
   padding: 10px;
   border: 3px solid black;
   border-color: black; 
-  background-color: rgb(211, 214, 215);
-} 
+  border-radius: 8px;
+  /* background-color: #73dd94; */
+  /* background-color: rgb(247, 247, 245); */
+
+.container {
+    margin: 5px;
+    padding: 10px;
+    border: 3px solid black;
+    border-color: black;
+    border-radius: 8px;
+    /* background-color: #73dd94; */
+    background-color: rgb(247, 247, 245);
+  }
+
+
+/* .card-body {
+  margin: 5px;
+  padding: 10px;
+  border: 3px solid black;
+  border-color: black;
+  background-color: #73dd94;
+} */
+
 .card-header {
-  font: normal 25px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
-  text-align: center;
+  font: normal 20px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  text-align: left;
 }
 
 header h1 {
@@ -116,9 +142,9 @@ body {
 .flex-outer li label,
 .flex-outer li p {
   padding: 8px;
-  font-weight: 300;
+  font-weight: bold;
   letter-spacing: .09em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .flex-outer>li>label,
@@ -138,8 +164,8 @@ body {
 
 .flex-outer li input:not([type='checkbox']),
 .flex-outer li textarea {
-  padding: 15px;
-  border: none;
+  padding: 8px;
+  border-radius: 5px;
 }
 
 /* .flex-outer li button {
