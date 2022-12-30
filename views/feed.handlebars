@@ -1,7 +1,6 @@
-<section>
+<section class="container">
   <h2>Community Workouts</h2>
-  <div class="card">
-    <article class="card-body">
+      <div class="card">
     {{#each posts as |post| }}
     <p class="card-header">{{post.user.username}} worked out on {{post.friendlyTimestamp}}
       <ul>
@@ -10,10 +9,8 @@
            {{entry.exercise.exercise_name}}: {{entry.string}}
          </li>
         {{/each}}
-        
       </ul>
       </p>
         {{/each}}
-  </div>    
-  </article>
+  </div>
 </section>
