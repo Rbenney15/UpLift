@@ -1,12 +1,15 @@
 # UpLift
 Login
-<img width="1584" alt="image" src="https://user-images.githubusercontent.com/98703735/172058148-8984aa03-5002-491f-a8eb-9213aafe0ce3.png">
+<img width="1538" alt="Loginpg" src="https://user-images.githubusercontent.com/98703735/212221091-4ad6d3bc-44c2-4e79-ab51-39f2860bd0b6.png">
+
 
 User Dashboard
-<img width="1589" alt="image" src="https://user-images.githubusercontent.com/98703735/172058232-70569079-fbaa-4381-8750-8a7a259cacd1.png">
+<img width="1439" alt="userdashboard" src="https://user-images.githubusercontent.com/98703735/212221116-a786cf19-c6b7-4cb6-980f-ae71b448e258.png">
+
 
 Community Workouts Feed
-<img width="1586" alt="image" src="https://user-images.githubusercontent.com/98703735/172058274-a721e724-8924-4d40-9431-3f9b1cbb0b70.png">
+<img width="1433" alt="feedpg" src="https://user-images.githubusercontent.com/98703735/212221137-4b7bc7cc-6e79-4bad-ab5f-321c34dbeb8c.png">
+
 
 
 ## Description
